@@ -83,12 +83,13 @@
   var setService = function (i) {
     shots.forEach(function (im) { im.classList.toggle('is-on', im.dataset.s === i); });
     $$('.service', list).forEach(function (s) { s.classList.toggle('is-on', s.dataset.s === i); });
+    $$('.services__nav a').forEach(function (a) { a.classList.toggle('is-on', a.dataset.s === i); });
   };
   list.classList.add('is-live');
   setService('0');
   var sio = new IntersectionObserver(function (entries) {
     entries.forEach(function (en) { if (en.isIntersecting) setService(en.target.dataset.s); });
-  }, { rootMargin: '-45% 0px -45% 0px' });
+  }, { rootMargin: '-50% 0px -50% 0px' }); // le texte qui passe au milieu de l'écran choisit la photo
   $$('.service', list).forEach(function (s) { sio.observe(s); });
 
   // Onglets (comparateur et avant/après) : flèches du clavier

@@ -19,7 +19,7 @@
 <link rel="preload" href="assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="assets/img/hero-mobile-800.webp" media="(max-width: 767px)">
-<link rel="preload" as="image" href="assets/img/hero-1600.webp" imagesrcset="assets/img/hero-1600.webp 1600w, assets/img/hero-2400.webp 2400w" imagesizes="100vw" media="(min-width: 768px)">
+<link rel="preload" as="image" href="assets/img/hero-1600.webp" imagesrcset="assets/img/hero-1600.webp 1600w, assets/img/hero-1920.webp 1920w" imagesizes="100vw" media="(min-width: 768px)">
 <script>document.documentElement.style.setProperty("--vh",innerHeight/100+"px")</script>
 <link rel="stylesheet" href="assets/css/style.css?v=1">
 <script>
@@ -80,7 +80,7 @@
   <div class="hero__media">
     <picture>
       <source media="(max-width: 767px)" srcset="assets/img/hero-mobile-800.webp">
-      <img src="assets/img/hero-1600.webp" srcset="assets/img/hero-1600.webp 1600w, assets/img/hero-2400.webp 2400w" sizes="100vw" width="1600" height="905" alt="Grande baie vitrée alu ouverte sur une terrasse bois, maison en brique rose du Tarn au coucher du soleil" fetchpriority="high">
+      <img src="assets/img/hero-1600.webp" srcset="assets/img/hero-1600.webp 1600w, assets/img/hero-1920.webp 1920w" sizes="100vw" width="1600" height="900" alt="Grande baie vitrée alu ouverte sur une terrasse bois, maison en brique rose du Tarn au coucher du soleil" fetchpriority="high">
     </picture>
     <video class="hero__video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-desktop="assets/video/hero-1080.mp4" data-src-mobile="assets/video/hero-mobile.mp4"></video>
     <button type="button" class="hero__pause" aria-label="Mettre la vidéo en pause" hidden><svg aria-hidden="true"><use href="#i-pause"/></svg><svg aria-hidden="true"><use href="#i-play"/></svg></button>
@@ -98,21 +98,20 @@
       <a class="btn btn--glass btn--lg" href="tel:+33614291230"><svg aria-hidden="true"><use href="#i-phone"/></svg>Appeler le 06 14 29 12 30</a>
     </div>
   </div>
-</section>
-
-<!-- Encadré « Votre projet ? » -->
-<section class="projet" aria-labelledby="t-projet">
-  <div class="projet__card">
-    <h2 id="t-projet">Votre projet ?</h2>
-    <ul class="projet__list">
-      <li><a href="#devis" data-projet="Fenêtres"><svg aria-hidden="true"><use href="#i-squares-four"/></svg>Fenêtres</a></li>
-      <li><a href="#devis" data-projet="Baie vitrée"><svg aria-hidden="true"><use href="#i-square-split-horizontal"/></svg>Baie vitrée</a></li>
-      <li><a href="#devis" data-projet="Porte d'entrée ou de garage"><svg aria-hidden="true"><use href="#i-door"/></svg>Porte</a></li>
-      <li><a href="#devis" data-projet="Cuisine sur mesure"><svg aria-hidden="true"><use href="#i-cooking-pot"/></svg>Cuisine</a></li>
-      <li><a href="#devis" data-projet="Rangements et dressing"><svg aria-hidden="true"><use href="#i-coat-hanger"/></svg>Rangements</a></li>
-      <li><a href="#devis" data-projet="Terrasse bois"><svg aria-hidden="true"><use href="#i-sun-horizon"/></svg>Terrasse</a></li>
-    </ul>
-  </div>
+  <!-- Encadré « Votre projet ? » -->
+  <section class="projet" aria-labelledby="t-projet">
+    <div class="projet__card">
+      <h2 id="t-projet">Votre projet ?</h2>
+      <ul class="projet__list">
+        <li><a href="#devis" data-projet="Fenêtres"><svg aria-hidden="true"><use href="#i-squares-four"/></svg>Fenêtres</a></li>
+        <li><a href="#devis" data-projet="Baie vitrée"><svg aria-hidden="true"><use href="#i-square-split-horizontal"/></svg>Baie vitrée</a></li>
+        <li><a href="#devis" data-projet="Porte d'entrée ou de garage"><svg aria-hidden="true"><use href="#i-door"/></svg>Porte</a></li>
+        <li><a href="#devis" data-projet="Cuisine sur mesure"><svg aria-hidden="true"><use href="#i-cooking-pot"/></svg>Cuisine</a></li>
+        <li><a href="#devis" data-projet="Rangements et dressing"><svg aria-hidden="true"><use href="#i-coat-hanger"/></svg>Rangements</a></li>
+        <li><a href="#devis" data-projet="Terrasse bois"><svg aria-hidden="true"><use href="#i-sun-horizon"/></svg>Terrasse</a></li>
+      </ul>
+    </div>
+  </section>
 </section>
 
 <!-- 2. BANDEAU DE CONFIANCE -->
@@ -133,36 +132,45 @@
       <p>Nous posons, fabriquons et ajustons tout nous-mêmes, du premier coup de mètre aux dernières finitions.</p>
     </header>
     <div class="services__grid">
-      <div class="services__stage" aria-hidden="true">
-        <div class="services__frame">
+      <div class="services__stage">
+        <div class="services__sticky">
+        <div class="services__frame" aria-hidden="true">
           <img src="assets/img/baie-piscine-800.webp" srcset="assets/img/baie-piscine-800.webp 800w, assets/img/baie-piscine-1600.webp 1600w" sizes="(min-width: 960px) 45vw, 100vw" width="800" height="1072" alt="" decoding="async" class="is-on" data-s="0" loading="lazy">
           <img src="assets/img/cuisine-bar-800.webp" srcset="assets/img/cuisine-bar-800.webp 800w, assets/img/cuisine-bar-1600.webp 1600w" sizes="(min-width: 960px) 45vw, 100vw" width="800" height="597" alt="" decoding="async" data-s="1" loading="lazy">
           <img src="assets/img/abri-bois-800.webp" srcset="assets/img/abri-bois-800.webp 800w, assets/img/abri-bois-1600.webp 1600w" sizes="(min-width: 960px) 45vw, 100vw" width="800" height="597" alt="" decoding="async" data-s="2" loading="lazy">
-          <img src="assets/img/terrasse-maison-800.webp" srcset="assets/img/terrasse-maison-800.webp 800w, assets/img/terrasse-maison-1600.webp 1600w" sizes="(min-width: 960px) 45vw, 100vw" width="800" height="597" alt="" decoding="async" data-s="3" loading="lazy">        </div>
+          <img src="assets/img/terrasse-maison-800.webp" srcset="assets/img/terrasse-maison-800.webp 800w, assets/img/terrasse-maison-1600.webp 1600w" sizes="(min-width: 960px) 45vw, 100vw" width="800" height="597" alt="" decoding="async" data-s="3" loading="lazy">
+        </div>
+        <ol class="services__nav" aria-label="Nos quatre métiers">
+          <li><a href="#s-menuiseries" data-s="0">Menuiseries</a></li>
+          <li><a href="#s-interieur" data-s="1">Intérieur</a></li>
+          <li><a href="#s-exterieur" data-s="2">Extérieur</a></li>
+          <li><a href="#s-terrasses" data-s="3">Terrasses</a></li>
+        </ol>
+        </div>
       </div>
       <div class="services__list">
-        <article class="service" data-s="0">
+        <article class="service" id="s-menuiseries" data-s="0">
           <figure class="service__img"><img src="assets/img/baie-piscine-800.webp" srcset="assets/img/baie-piscine-800.webp 800w, assets/img/baie-piscine-1600.webp 1600w" sizes="100vw" width="800" height="1072" alt="Baie vitrée posée par DR Menuiserie, vue sur la piscine" decoding="async" loading="lazy"></figure>
           <h3>Menuiseries PVC, bois et alu</h3>
           <p>Fenêtres, baies vitrées, portes d'entrée et de garage. Une vraie isolation thermique et phonique, posée par un artisan RGE.</p>
           <ul class="ticks"><li>Fenêtres et portes-fenêtres</li><li>Baies vitrées coulissantes</li><li>Portes d'entrée et de garage</li></ul>
           <a class="btn btn--green" href="#devis" data-projet="Fenêtres">Demander un devis</a>
         </article>
-        <article class="service" data-s="1">
+        <article class="service" id="s-interieur" data-s="1">
           <figure class="service__img"><img src="assets/img/cuisine-bar-800.webp" srcset="assets/img/cuisine-bar-800.webp 800w, assets/img/cuisine-bar-1600.webp 1600w" sizes="100vw" width="800" height="597" alt="Cuisine sur mesure gris anthracite et chêne avec coin bar" decoding="async" loading="lazy"></figure>
           <h3>Agencement intérieur</h3>
           <p>Cuisines sur mesure, dressings, placards et rangements, dessinés pour votre pièce au centimètre près.</p>
           <ul class="ticks"><li>Cuisines équipées</li><li>Dressings et placards</li><li>Portes et séparations intérieures</li></ul>
           <a class="btn btn--green" href="#devis" data-projet="Cuisine sur mesure">Demander un devis</a>
         </article>
-        <article class="service" data-s="2">
+        <article class="service" id="s-exterieur" data-s="2">
           <figure class="service__img"><img src="assets/img/abri-bois-800.webp" srcset="assets/img/abri-bois-800.webp 800w, assets/img/abri-bois-1600.webp 1600w" sizes="100vw" width="800" height="597" alt="Abri de jardin en bois construit par DR Menuiserie" decoding="async" loading="lazy"></figure>
           <h3>Agencement extérieur</h3>
           <p>Pergolas, bardages, clôtures, portails et abris de jardin, avec des matériaux choisis pour résister au climat.</p>
           <ul class="ticks"><li>Pergolas et abris</li><li>Bardage bois</li><li>Clôtures et portails</li></ul>
           <a class="btn btn--green" href="#devis" data-projet="Agencement extérieur">Demander un devis</a>
         </article>
-        <article class="service" data-s="3">
+        <article class="service" id="s-terrasses" data-s="3">
           <figure class="service__img"><img src="assets/img/terrasse-maison-800.webp" srcset="assets/img/terrasse-maison-800.webp 800w, assets/img/terrasse-maison-1600.webp 1600w" sizes="100vw" width="800" height="597" alt="Terrasse en bois devant une maison en pierre et brique du Tarn" decoding="async" loading="lazy"></figure>
           <h3>Terrasses bois</h3>
           <p>Pin traité, bois exotique ou plage de piscine : des essences durables, posées sur une ossature solide.</p>
@@ -307,7 +315,8 @@
 <section class="section why" id="pourquoi" aria-labelledby="t-why">
   <div class="wrap why__in">
     <div class="why__intro reveal">
-      <h2 id="t-why">Un seul interlocuteur, du devis à la pose</h2>
+      <h2 id="t-why">Pourquoi <em>nous choisir</em>&nbsp;?</h2>
+      <p class="why__lead">Un seul interlocuteur, du devis à la pose.</p>
       <blockquote class="why__quote">
         <p>«&nbsp;Pour un client satisfait, il faut un budget maîtrisé et de la rapidité.&nbsp;»</p>
         <footer><span class="why__sign">Romain Domingo</span>Fondateur de DR Menuiserie</footer>
